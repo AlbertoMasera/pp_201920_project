@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "activiesType": {
+      "type": "object",
+      "properties": {
+        "type": "object",
+        "additionalProperties": {"type": "integer"},
+        "items": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "loipen",
+        "klassisch und skating"
+      ]
+    },
+    "trackedActivityIds": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "regionsWithMostActivities": {
+      "type": "object",
+      "properties": {
+        "numberOfActivities": {
+          "type": "integer"
+        },
+        "regionIds": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "numberOfActivities",
+        "regionIds"
+      ]
+    },
+    "regionsWithLeastActivities": {
+      "type": "object",
+      "properties": {
+        "numberOfActivities": {
+          "type": "integer"
+        },
+        "regionIds": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "numberOfActivities",
+        "regionIds"
+      ]
+    }
+  },
+  "required": [
+    "activiesType",
+    "trackedActivityIds",
+    "regionsWithMostActivities",
+    "regionsWithLeastActivities"
+  ],
+  "additionalProperties" : false
+}
